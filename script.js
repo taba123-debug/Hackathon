@@ -12,13 +12,11 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// gsap.from(".hero h1", { opacity: 0, y: -50, duration: 1 });
-// gsap.from(".hero p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
-// gsap.from(".cta", { opacity: 0, scale: 0.5, duration: 1, delay: 1 });
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
 
+    // Check Local Storage for saved theme
     if (localStorage.getItem("theme") === "light") {
         body.classList.add("light-theme");
         themeToggle.textContent = "🌙"; // Moon icon for dark mode
@@ -39,5 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-
